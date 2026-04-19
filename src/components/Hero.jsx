@@ -13,12 +13,12 @@ export default function Hero() {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="mb-8 relative group"
             >
-                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border border-black/10 shadow-xl bg-white relative z-10">
+                <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border border-black/10 shadow-xl bg-white relative z-10 w-[object-cover] items-center flex justify-center">
                     <img
-                        src="profile.jpeg"
+                        src="/profile.jpeg"
                         alt="Karan Surve"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        title="Replace this placeholder with your photo in /public/profile.jpg"
+                        title="Profile photo"
                     />
                 </div>
                 {/* Subtle soft shadow ring behind image */}
