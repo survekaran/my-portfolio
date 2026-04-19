@@ -1,6 +1,6 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import { useRef } from "react";
+import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
 import * as THREE from "three";
@@ -30,9 +30,9 @@ function Sphere() {
         <mesh ref={meshRef}>
             <sphereGeometry args={[1.5, 64, 64]} />
             <meshStandardMaterial
-                color="#00ffff"
-                emissive="#00ffff"
-                emissiveIntensity={1.5}
+                color="#e4e4e7" /* zinc-200 */
+                emissive="#d4d4d8" /* zinc-300 */
+                emissiveIntensity={0.2}
                 wireframe
             />
         </mesh>
@@ -40,22 +40,25 @@ function Sphere() {
 }
 
 function Particles() {
-    const particles = new Float32Array(500 * 3);
-
-    for (let i = 0; i < 500; i++) {
-        particles[i * 3] = (Math.random() - 0.5) * 10;
-        particles[i * 3 + 1] = (Math.random() - 0.5) * 10;
-        particles[i * 3 + 2] = (Math.random() - 0.5) * 10;
-    }
+    const particles = useMemo(() => {
+        const temp = new Float32Array(500 * 3);
+        for (let i = 0; i < 500; i++) {
+            temp[i * 3] = (Math.random() - 0.5) * 10;
+            temp[i * 3 + 1] = (Math.random() - 0.5) * 10;
+            temp[i * 3 + 2] = (Math.random() - 0.5) * 10;
+        }
+        return temp;
+    }, []);
 
     return (
         <Points positions={particles} stride={3}>
             <PointMaterial
                 transparent
-                color="#00ffff"
-                size={0.05}
+                color="#a1a1aa" /* zinc-400 */
+                size={0.03}
                 sizeAttenuation={true}
                 depthWrite={false}
+                opacity={0.5}
             />
         </Points>
     );
@@ -65,10 +68,10 @@ export default function ThreeScene() {
     return (
         <div className="fixed top-0 left-0 w-full h-full -z-10">
             <Canvas>
-                <ambientLight intensity={0.5} />
-                <pointLight position={[5, 5, 5]} />
+                <ambientLight intensity={0.8} />
+                <pointLight position={[5, 5, 5]} intensity={2} />
 
-                <Particles />   {/* 👈 ADD THIS */}
+                <Particles />
                 <Sphere />
             </Canvas>
         </div>

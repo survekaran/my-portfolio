@@ -34,7 +34,7 @@ export default function Cursor() {
     return (
         <motion.div
             className="fixed top-0 left-0 rounded-full pointer-events-none z-50 
-                 bg-cyan-400 mix-blend-difference"
+                 bg-zinc-900/50 mix-blend-multiply"
             animate={{
                 x: position.x - (hover ? 20 : 12),
                 y: position.y - (hover ? 20 : 12),
