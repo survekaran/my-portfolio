@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Projects() {
     return (
-        <section className="p-10 grid md:grid-cols-3 gap-6">
+        <section id="projects" className="p-10 grid md:grid-cols-3 gap-6">
 
             {/* Project 1 */}
             <motion.div
