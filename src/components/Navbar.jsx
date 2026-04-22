@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Navbar() {
     return (
-        <motion.nav 
+        <motion.nav
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
@@ -33,6 +33,11 @@ export default function Navbar() {
 
                     <a href="#contact" className="text-zinc-600 hover:text-zinc-900 transition duration-300 relative group">
                         Contact
+                        <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
+                    </a>
+
+                    <a href="public/Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-zinc-900 transition duration-300 relative group">
+                        Resume
                         <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
                     </a>
 

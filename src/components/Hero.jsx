@@ -94,6 +94,17 @@ export default function Hero() {
                     <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </a>
                 <a
+                    href="/Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-8 py-3.5 rounded-full bg-white text-zinc-900 border border-black/10 
+                               font-medium text-sm md:text-base hover:bg-zinc-50 transition-all duration-300
+                               hover:shadow-sm flex items-center gap-2"
+                >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                    Resume
+                </a>
+                <a
                     href="#contact"
                     className="px-8 py-3.5 rounded-full bg-white text-zinc-900 border border-black/10 
                                font-medium text-sm md:text-base hover:bg-zinc-50 transition-all duration-300
