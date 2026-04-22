@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const skills = [
     "React", "Node.js", "MongoDB", "Express",
-    "JavaScript", "Python", "Tailwind CSS", "Three.js",
+    "JavaScript", "Python", "Tailwind CSS", "FAST APIs",
     "Git", "REST APIs", "SQL", "Machine Learning",
 ];
 
@@ -33,7 +33,7 @@ export default function About() {
                     className="bg-white/80 backdrop-blur-md p-10 md:p-12 rounded-3xl mb-12 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-black/5 relative overflow-hidden group"
                 >
                     <div className="absolute inset-0 bg-gradient-to-br from-zinc-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                    
+
                     <p className="text-zinc-600 leading-relaxed text-lg md:text-xl font-light">
                         I am a passionate web developer and computer science student focused on building
                         real-world projects. I enjoy turning ideas into functional and visually appealing

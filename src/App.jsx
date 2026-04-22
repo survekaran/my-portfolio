@@ -39,7 +39,7 @@ export default function App() {
       <ThreeScene />
       <ScrollBar />
       <Navbar />
-      
+
       <main className="relative z-10 space-y-24">
         <Hero />
         <About />
@@ -51,7 +51,7 @@ export default function App() {
       <footer className="relative z-10 text-center py-12 mt-24 border-t border-black/5 bg-white/30 backdrop-blur-md">
         <div className="flex flex-col items-center justify-center gap-2">
           <h2 className="text-xl font-bold tracking-tight text-zinc-800">Karan Surve</h2>
-          <p className="text-zinc-500 text-sm">© {new Date().getFullYear()} Karan Surve · Minimalist Edition</p>
+          <p className="text-zinc-500 text-sm">© {new Date().getFullYear()} Karan Surve </p>
         </div>
       </footer>
     </div>
