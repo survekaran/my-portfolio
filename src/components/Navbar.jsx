@@ -36,10 +36,10 @@ export default function Navbar() {
                         <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
                     </a>
 
-                    <a href="public/Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-zinc-900 transition duration-300 relative group">
+                    {/* <a href="public/Resume.pdf" target="_blank" rel="noopener noreferrer" className="text-zinc-600 hover:text-zinc-900 transition duration-300 relative group">
                         Resume
                         <span className="absolute -bottom-1 left-0 w-0 h-[1.5px] bg-zinc-900 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
+                    </a> */}
 
                 </div>
 
