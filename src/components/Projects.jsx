@@ -6,7 +6,7 @@ const projects = [
         description: "AI-powered tool that analyzes resumes against job descriptions, providing skill gap analysis and improvement suggestions.",
         tech: ["Javascript", "Typescript", "HTML", "Python"],
         github: "https://github.com/survekaran/AI-Resume-Analyzer",
-        live: null,
+        live: "https://ai-resume-analyzer-lemon-eta.vercel.app/",
         color: "from-zinc-200 to-zinc-300",
         shadow: "rgba(0, 0, 0, 0.05)",
     },
