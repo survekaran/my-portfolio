@@ -2,11 +2,11 @@ import { motion } from "framer-motion";
 
 const projects = [
     {
-        title: "Resume Analyzer",
-        description: "AI-powered tool that analyzes resumes against job descriptions, providing skill gap analysis and improvement suggestions.",
-        tech: ["Javascript", "Typescript", "HTML", "Python"],
-        github: "https://github.com/survekaran/AI-Resume-Analyzer",
-        live: "https://ai-resume-analyzer-lemon-eta.vercel.app/",
+        title: "Rural Care - Telemedicine Platform",
+        description: "An AI-powered telemedicine platform that improves healthcare access in rural areas by enabling online consultations, AI-based diagnostics, and medicine availability tracking.",
+        tech: ["React", "Python", "TailwindCSS", "FastAPI", "PythonJWT Authentication"],
+        github: "https://github.com/survekaran/RuralCare-AI",
+        live: "https://rural-care-ai-one.vercel.app/",
         color: "from-zinc-200 to-zinc-300",
         shadow: "rgba(0, 0, 0, 0.05)",
     },
@@ -20,11 +20,11 @@ const projects = [
         shadow: "rgba(0, 0, 0, 0.05)",
     },
     {
-        title: "Wavdrop",
-        description: "A fast and seamless platform for sharing and streaming high-quality audio files instantly. Built for creators and producers.",
-        tech: ["Python", "HTML", "ffmpeg", "yt-dlp", "Flask"],
-        github: "https://github.com/survekaran/WAVDROP",
-        live: "https://wavdrop-chi.vercel.app/",
+        title: "AI-Resume-Analyzer",
+        description: "A smart resume-analysis tool built with Python that reads resumes, extracts key information, and evaluates them using NLP and machine learning. The system highlights strengths, flags missing skills, and gives an overall score to help candidates improve their resumes before applying for jobs.",
+        tech: ["Typescript", "Tailwind CSS", "HTMl", "Javascript"],
+        github: "https://github.com/survekaran/AI-Resume-Analyzer",
+        live: "ai-resume-analyzer-lemon-eta.vercel.app",
         color: "from-zinc-200 to-zinc-300",
         shadow: "rgba(0, 0, 0, 0.05)",
     },

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 const skills = [
     "React", "Node.js", "MongoDB", "Express",
     "JavaScript", "Python", "Tailwind CSS", "FAST APIs",
-    "Git", "REST APIs", "SQL", "Machine Learning",
+    "Git", "REST APIs", "SQL", "Machine Learning", "Django"
 ];
 
 export default function About() {
