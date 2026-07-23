@@ -37,7 +37,7 @@ export default function About() {
                     <p className="text-zinc-600 leading-relaxed text-lg md:text-xl font-light">
                         I am a passionate web developer and computer science student focused on building
                         real-world projects. I enjoy turning ideas into functional and visually appealing
-                        applications using modern technologies like <strong className="font-semibold text-zinc-900">React, Node.js, and MongoDB</strong>.
+                        applications using modern technologies like <strong className="font-semibold text-zinc-900">FastAPI, AI, WebRTC and Full Stack</strong>.
                     </p>
 
                     <p className="text-zinc-600 mt-6 leading-relaxed text-lg md:text-xl font-light">
