@@ -1,5 +1,5 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, MeshDistortMaterial } from "@react-three/drei";
 import { useRef, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Points, PointMaterial } from "@react-three/drei";
@@ -8,32 +8,25 @@ import * as THREE from "three";
 function Sphere() {
     const meshRef = useRef();
 
-    useFrame(({ clock, mouse }) => {
-        const time = clock.getElapsedTime();
-
-        // Rotation (mouse + auto)
-        meshRef.current.rotation.x = mouse.y * 2;
-        meshRef.current.rotation.y = mouse.x * 2;
-
-        // WAVE DISTORTION 🔥
-        meshRef.current.geometry.attributes.position.array.forEach((_, i, arr) => {
-            if (i % 3 === 0) {
-                arr[i] += Math.sin(time + arr[i]) * 0.002;
-                arr[i + 1] += Math.cos(time + arr[i + 1]) * 0.002;
-            }
-        });
-
-        meshRef.current.geometry.attributes.position.needsUpdate = true;
+    useFrame(({ mouse }) => {
+        // Smooth Rotation (mouse only)
+        if (meshRef.current) {
+            // Using lerp for smoother rotation towards mouse position
+            meshRef.current.rotation.x += (mouse.y * 1.5 - meshRef.current.rotation.x) * 0.05;
+            meshRef.current.rotation.y += (mouse.x * 1.5 - meshRef.current.rotation.y) * 0.05;
+        }
     });
 
     return (
         <mesh ref={meshRef}>
-            <sphereGeometry args={[1.5, 64, 64]} />
-            <meshStandardMaterial
+            <sphereGeometry args={[1.5, 32, 32]} />
+            <MeshDistortMaterial
                 color="#e4e4e7" /* zinc-200 */
                 emissive="#d4d4d8" /* zinc-300 */
                 emissiveIntensity={0.2}
                 wireframe
+                distort={0.3}
+                speed={2}
             />
         </mesh>
     );
@@ -50,8 +43,16 @@ function Particles() {
         return temp;
     }, []);
 
+    const pointsRef = useRef();
+
+    useFrame((state) => {
+        if (pointsRef.current) {
+            pointsRef.current.rotation.y = state.clock.getElapsedTime() * 0.05;
+        }
+    });
+
     return (
-        <Points positions={particles} stride={3}>
+        <Points ref={pointsRef} positions={particles} stride={3}>
             <PointMaterial
                 transparent
                 color="#a1a1aa" /* zinc-400 */
@@ -67,7 +68,7 @@ function Particles() {
 export default function ThreeScene() {
     return (
         <div className="fixed top-0 left-0 w-full h-full -z-10">
-            <Canvas>
+            <Canvas camera={{ position: [0, 0, 5], fov: 45 }}>
                 <ambientLight intensity={0.8} />
                 <pointLight position={[5, 5, 5]} intensity={2} />
 
